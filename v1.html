@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>陈瑶 · 个人简历</title>
+<meta name="description" content="陈瑶的个人简历 — 摄影 / 剪辑 / 文案 / AI 剪辑，电商产品摄影与内容剪辑">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📷</text></svg>">
+<style>
+  /* ============ 字体（本地化，禁止 CDN） ============ */
+  @font-face {
+    font-family: 'AlimamaFangYuanTi';
+    src: url('fonts/AlimamaFangYuanTiVF.woff2') format('woff2'),
+         url('fonts/AlimamaFangYuanTiVF.ttf') format('truetype');
+    font-weight: 200 700;
+    font-display: swap;
+  }
+
+  /* ============ 设计变量 ============ */
+  :root {
+    --bg:#FDF9EE;
+    --card:#FFFDF7;
+    --ink:#2C2A26;
+    --ink-soft:#5C574E;
+    --ink-light:#8C8578;
+    --blue:#3F6FB5;
+    --blue-deep:#1C3572;
+    --blue-soft:#E8F0FA;
+    --mint:#6FA893;
+    --mint-soft:#E4F1EB;
+    --peach:#D98A62;
+    --peach-soft:#FBEDE3;
+    --yellow:#F0C24B;
+    --yellow-soft:#FEF4D6;
+    --line:#E6DDC8;
+    --radius:18px;
+    --shadow:0 2px 0 #E6DDC8, 0 10px 26px rgba(94,82,58,.07);
+    --fw-title:700;
+    --fw-name:700;
+    --fw-body:450;
+    --fw-label:600;
+  }
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+
+  body {
+    font-family:'AlimamaFangYuanTi', system-ui, sans-serif;
+    font-variation-settings:'wght' var(--fw-body);
+    background:var(--bg);
+    color:var(--ink);
+    line-height:1.85;
+    padding:44px 20px 72px;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  /* 背景装饰：柔和斜纹 + 小圆点 */
+  body::before {
+    content:'';
+    position:fixed; inset:0; z-index:-1; pointer-events:none;
+    background-image:
+      repeating-linear-gradient(45deg, rgba(190,175,140,.055) 0 2px, transparent 2px 16px),
+      radial-gradient(circle at 12% 8%, rgba(63,111,181,.07), transparent 42%),
+      radial-gradient(circle at 88% 22%, rgba(217,138,98,.07), transparent 40%);
+  }
+
+  .wrap { max-width:880px; margin:0 auto; }
+
+  /* ============ 头部名片 ============ */
+  .card {
+    background:var(--card);
+    border:2px solid var(--ink);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+  }
+
+  .header {
+    padding:44px 44px 38px;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+  }
+
+  .header::before {
+    content:'';
+    position:absolute; top:-38px; left:-38px;
+    width:120px; height:120px; border-radius:50%;
+    background:var(--yellow-soft);
+  }
+  .header::after {
+    content:'';
+    position:absolute; bottom:-44px; right:-36px;
+    width:130px; height:130px; border-radius:50%;
+    background:var(--blue-soft);
+  }
+  .header > * { position:relative; z-index:1; }
+
+  .avatar {
+    width:96px; height:96px; margin:0 auto 18px;
+    border-radius:50%;
+    background:var(--peach-soft);
+    border:2.5px solid var(--ink);
+    display:flex; align-items:center; justify-content:center;
+    font-size:38px;
+    font-variation-settings:'wght' 700;
+    color:var(--peach);
+    letter-spacing:1px;
+  }
+
+  h1 {
+    font-size:46px;
+    font-variation-settings:'wght' var(--fw-name);
+    letter-spacing:6px;
+    line-height:1.3;
+  }
+
+  .tagline {
+    margin-top:10px;
+    font-size:16px;
+    color:var(--ink-soft);
+    letter-spacing:2px;
+  }
+
+  .slogan {
+    display:inline-block;
+    margin-top:18px;
+    padding:6px 20px;
+    background:var(--yellow-soft);
+    border:2px solid var(--ink);
+    border-radius:999px;
+    font-size:14px;
+    letter-spacing:1.5px;
+    font-variation-settings:'wght' var(--fw-label);
+  }
+
+  /* 基本信息栏 */
+  .meta {
+    margin-top:26px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(120px, 1fr));
+    gap:10px;
+  }
+  .meta-item {
+    background:var(--blue-soft);
+    border-radius:12px;
+    padding:10px 8px;
+    border:1.5px solid var(--blue);
+  }
+  .meta-k { display:block; font-size:12px; color:var(--blue-deep); letter-spacing:1px; opacity:.85; }
+  .meta-v { display:block; font-size:16px; font-variation-settings:'wght' var(--fw-label); color:var(--blue-deep); margin-top:2px; }
+
+  /* ============ 通用区块 ============ */
+  section { margin-top:28px; }
+
+  .sec-head {
+    display:flex; align-items:center; gap:12px;
+    margin-bottom:16px;
+    padding-left:2px;
+  }
+  .sec-num {
+    width:32px; height:32px; flex:none;
+    border-radius:50%;
+    background:var(--blue);
+    color:#fff;
+    display:flex; align-items:center; justify-content:center;
+    font-size:15px;
+    font-variation-settings:'wght' 700;
+    box-shadow:0 2px 0 var(--blue-deep);
+  }
+  h2 {
+    font-size:23px;
+    font-variation-settings:'wght' var(--fw-title);
+    letter-spacing:3px;
+  }
+  .sec-line { flex:1; height:2px; background:var(--line); border-radius:2px; }
+
+  /* ============ 技能 ============ */
+  .skills {
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(150px, 1fr));
+    gap:14px;
+  }
+  .skill {
+    padding:20px 16px;
+    text-align:center;
+    border-radius:16px;
+    border:2px solid var(--ink);
+    background:var(--card);
+    box-shadow:0 2px 0 var(--ink);
+    transition:transform .18s ease, box-shadow .18s ease;
+  }
+  .skill:hover { transform:translateY(-3px); box-shadow:0 5px 0 var(--ink); }
+  .skill-ico { font-size:26px; line-height:1.4; }
+  .skill-name {
+    font-size:18px;
+    font-variation-settings:'wght' var(--fw-label);
+    letter-spacing:1.5px;
+    margin-top:4px;
+  }
+  .skill-desc { font-size:13px; color:var(--ink-light); line-height:1.7; margin-top:4px; }
+  .s1 { background:var(--peach-soft); }
+  .s2 { background:var(--mint-soft); }
+  .s3 { background:var(--blue-soft); }
+  .s4 { background:var(--yellow-soft); }
+
+  /* ============ 工作经历时间线 ============ */
+  .timeline { padding:30px 30px 26px; }
+  .job { position:relative; padding-left:34px; padding-bottom:26px; }
+  .job:last-child { padding-bottom:0; }
+
+  .job::before {
+    content:'';
+    position:absolute; left:8px; top:9px;
+    width:13px; height:13px; border-radius:50%;
+    background:var(--peach);
+    border:2.5px solid var(--ink);
+    z-index:2;
+  }
+  .job::after {
+    content:'';
+    position:absolute; left:16px; top:22px; bottom:-2px;
+    width:2.5px; background:var(--line);
+  }
+  .job:last-child::after { display:none; }
+
+  .job-top {
+    display:flex; align-items:baseline; flex-wrap:wrap; gap:10px;
+  }
+  .job-title {
+    font-size:20px;
+    font-variation-settings:'wght' var(--fw-title);
+    letter-spacing:1.5px;
+  }
+  .job-badge {
+    font-size:12px;
+    padding:2px 10px;
+    border-radius:999px;
+    border:1.5px solid var(--peach);
+    color:var(--peach);
+    background:var(--peach-soft);
+    letter-spacing:.5px;
+    white-space:nowrap;
+  }
+  .job-badge.blue { border-color:var(--blue); color:var(--blue); background:var(--blue-soft); }
+  .job-badge.mint { border-color:var(--mint); color:var(--mint); background:var(--mint-soft); }
+  .job-badge.yellow { border-color:#C99B1E; color:#A8811A; background:var(--yellow-soft); }
+
+  .job-desc {
+    margin-top:6px;
+    font-size:14.5px;
+    color:var(--ink-soft);
+  }
+  .job-desc b {
+    font-variation-settings:'wght' var(--fw-label);
+    color:var(--ink);
+  }
+  .tags { margin-top:8px; display:flex; flex-wrap:wrap; gap:7px; }
+  .tag {
+    font-size:12.5px;
+    padding:2px 11px;
+    border-radius:8px;
+    background:var(--blue-soft);
+    color:var(--blue-deep);
+    border:1px solid #C7D9EF;
+  }
+
+  /* ============ 作品展示 ============ */
+  .gallery {
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(150px, 1fr));
+    gap:14px;
+  }
+  .shot {
+    aspect-ratio:1/1;
+    border-radius:16px;
+    border:2px dashed #C9BCA0;
+    background:var(--card);
+    display:flex; flex-direction:column;
+    align-items:center; justify-content:center;
+    gap:6px;
+    color:var(--ink-light);
+    text-align:center;
+    padding:10px;
+  }
+  .shot-ico { font-size:26px; opacity:.7; }
+  .shot-k { font-size:13.5px; letter-spacing:1px; }
+  .shot-n { font-size:11.5px; opacity:.75; }
+
+  /* ============ 底部 ============ */
+  .footer {
+    margin-top:28px;
+    padding:26px 30px;
+    display:flex; align-items:center; justify-content:space-between;
+    gap:20px; flex-wrap:wrap;
+    background:var(--blue);
+    border-color:var(--blue-deep);
+    color:#fff;
+  }
+  .footer .note { font-size:14px; letter-spacing:1.5px; line-height:1.9; }
+  .footer .note span { display:block; font-size:13px; opacity:.85; letter-spacing:0; }
+  .contact { display:flex; gap:10px; flex-wrap:wrap; }
+  .contact span {
+    font-size:13.5px;
+    color:var(--blue-deep);
+    background:rgba(255,255,255,.92);
+    border:1.5px dashed #9DB8CC;
+    padding:7px 16px;
+    border-radius:999px;
+    letter-spacing:.5px;
+    white-space:nowrap;
+  }
+  .contact span b { font-variation-settings:'wght' 700; }
+
+  /* ============ 响应式 ============ */
+  @media (max-width:640px) {
+    body { padding:22px 14px 48px; }
+    .header { padding:32px 22px 28px; }
+    h1 { font-size:34px; letter-spacing:4px; }
+    h2 { font-size:20px; letter-spacing:2px; }
+    .timeline { padding:24px 20px 20px; }
+    .footer { padding:22px; }
+    .avatar { width:80px; height:80px; font-size:32px; }
+  }
+
+  /* ============ 打印 ============ */
+  @media print {
+    body { background:#fff; padding:0; }
+    body::before { display:none; }
+    .card { box-shadow:none; border-color:#999; break-inside:avoid; }
+    .skill:hover { transform:none; }
+    section { margin-top:16px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 名片 -->
+  <header class="card header">
+    <div class="avatar">瑶</div>
+    <h1>陈　瑶</h1>
+    <div class="tagline">摄影 / 剪辑 / 文案 / AI 剪辑</div>
+    <div class="slogan">电商产品摄影 &amp; 内容剪辑</div>
+
+    <div class="meta">
+      <div class="meta-item">
+        <span class="meta-k">姓　名</span>
+        <span class="meta-v">陈瑶</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-k">性　别</span>
+        <span class="meta-v">女</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-k">出生日期</span>
+        <span class="meta-v">2002.09.02</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-k">求职方向</span>
+        <span class="meta-v">摄影/剪辑</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- 技能 -->
+  <section>
+    <div class="sec-head">
+      <div class="sec-num">1</div>
+      <h2>专业技能</h2>
+      <div class="sec-line"></div>
+    </div>
+
+    <div class="skills">
+      <div class="skill s1">
+        <div class="skill-ico">📷</div>
+        <div class="skill-name">摄影</div>
+        <div class="skill-desc">电商产品拍摄<br>灯光与构图</div>
+      </div>
+      <div class="skill s2">
+        <div class="skill-ico">🎬</div>
+        <div class="skill-name">剪辑</div>
+        <div class="skill-desc">素材粗剪精剪<br>节奏与转场</div>
+      </div>
+      <div class="skill s3">
+        <div class="skill-ico">✍️</div>
+        <div class="skill-name">文案</div>
+        <div class="skill-desc">产品卖点提炼<br>标题与脚本</div>
+      </div>
+      <div class="skill s4">
+        <div class="skill-ico">✨</div>
+        <div class="skill-name">AI 剪辑</div>
+        <div class="skill-desc">AI 辅助成片<br>效率提升</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 工作经历 -->
+  <section>
+    <div class="sec-head">
+      <div class="sec-num">2</div>
+      <h2>工作经历</h2>
+      <div class="sec-line"></div>
+    </div>
+
+    <div class="card timeline">
+
+      <div class="job">
+        <div class="job-top">
+          <span class="job-title">摄影</span>
+          <span class="job-badge">在职 · 核心经历</span>
+        </div>
+        <div class="job-desc">
+          负责电商产品实拍与后期成片，覆盖<b>鞋类、男装、女裤、水杯</b>等品类；
+          独立完成拍摄、选图、精修与视频剪辑全流程。
+        </div>
+        <div class="tags">
+          <span class="tag">产品拍摄</span>
+          <span class="tag">鞋服配饰</span>
+          <span class="tag">水杯日用</span>
+          <span class="tag">后期成片</span>
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="job-top">
+          <span class="job-title">中介</span>
+          <span class="job-badge mint">客户服务</span>
+        </div>
+        <div class="job-desc">
+          负责客户房源/需求信息对接与跟进，<b>对接、带看、促成签约</b>全流程服务，
+          积累了大量沟通协调与客户接待经验。
+        </div>
+        <div class="tags">
+          <span class="tag">客户对接</span>
+          <span class="tag">需求匹配</span>
+          <span class="tag">沟通协调</span>
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="job-top">
+          <span class="job-title">家教老师</span>
+          <span class="job-badge blue">教育</span>
+        </div>
+        <div class="job-desc">
+          为中小学生提供<b>学科辅导与作业答疑</b>，定制学习计划，
+          具备耐心、清晰的表达能力和良好的亲和力。
+        </div>
+        <div class="tags">
+          <span class="tag">学科辅导</span>
+          <span class="tag">因材施教</span>
+          <span class="tag">沟通表达</span>
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="job-top">
+          <span class="job-title">主播</span>
+          <span class="job-badge yellow">出镜表达</span>
+        </div>
+        <div class="job-desc">
+          负责<b>直播间出镜讲解与商品介绍</b>，熟悉产品卖点提炼与现场应变，
+          对镜头表达自然流畅。
+        </div>
+        <div class="tags">
+          <span class="tag">出镜讲解</span>
+          <span class="tag">产品卖点</span>
+          <span class="tag">直播运营</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 作品展示 -->
+  <section>
+    <div class="sec-head">
+      <div class="sec-num">3</div>
+      <h2>代表作品</h2>
+      <div class="sec-line"></div>
+    </div>
+
+    <div class="gallery">
+      <div class="shot">
+        <div class="shot-ico">👟</div>
+        <div class="shot-k">鞋类实拍</div>
+        <div class="shot-n">待上传作品图</div>
+      </div>
+      <div class="shot">
+        <div class="shot-ico">👕</div>
+        <div class="shot-k">男装实拍</div>
+        <div class="shot-n">待上传作品图</div>
+      </div>
+      <div class="shot">
+        <div class="shot-ico">👖</div>
+        <div class="shot-k">女裤实拍</div>
+        <div class="shot-n">待上传作品图</div>
+      </div>
+      <div class="shot">
+        <div class="shot-ico">🥤</div>
+        <div class="shot-k">水杯实拍</div>
+        <div class="shot-n">待上传作品图</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 底部 -->
+  <section>
+    <div class="card footer">
+      <div class="note">
+        陈瑶 · 摄影 / 剪辑
+        <span>期待与您联系，沟通合作机会</span>
+      </div>
+      <div class="contact">
+        <span>📱 手机：<b>待填写</b></span>
+        <span>✉️ 邮箱：<b>待填写</b></span>
+        <span>💬 微信：<b>待填写</b></span>
+      </div>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>

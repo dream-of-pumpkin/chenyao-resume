@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>陈瑶 · 简历</title>
+<meta name="description" content="陈瑶的个人简历 — 摄影 / 剪辑 / 文案 / AI 剪辑">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📷</text></svg>">
+<style>
+  /* ============ 字体 ============ */
+  @font-face {
+    font-family:'FangYuan';
+    src:url('fonts/AlimamaFangYuanTiVF.woff2') format('woff2'),
+        url('fonts/AlimamaFangYuanTiVF.ttf') format('truetype');
+    font-weight:200 700;
+    font-display:swap;
+  }
+  @font-face {
+    font-family:'JBMono';
+    src:url('fonts/JetBrainsMono-400.woff2') format('woff2');
+    font-weight:400; font-display:swap;
+  }
+  @font-face {
+    font-family:'JBMono';
+    src:url('fonts/JetBrainsMono-700.woff2') format('woff2');
+    font-weight:700; font-display:swap;
+  }
+
+  /* ============ 变量（色值取自参考站实测） ============ */
+  :root {
+    --paper:#FEFCF6;      /* 页面底色 */
+    --screen:#2B7FD8;     /* 屏幕蓝 */
+    --screen-2:#3183D9;   /* 扫描线亮纹 */
+    --bezel:#2A2A30;      /* 屏幕外壳 */
+    --ink:#2A2A30;        /* 主文字 */
+    --ink-2:#8A8A93;      /* 次级文字 */
+    --ink-3:#B8B8BE;      /* 占位/极弱 */
+    --pill:#C9DEF5;       /* 分页激活胶囊 */
+    --dollar:#F5D76E;     /* $ 提示符黄 */
+    --grey-btn:#E8E8EA;   /* 窗口按钮灰 */
+    --red-dot:#F26B5E;
+    --yel-dot:#F5C044;
+    --grn-dot:#4FBF6A;
+    --line:#E6E4DC;
+    --fw-body:450;
+    --fw-strong:700;
+    --fw-label:600;
+  }
+
+  *{ margin:0; padding:0; box-sizing:border-box; }
+
+  html{ scroll-behavior:smooth; }
+
+  body {
+    font-family:'JBMono','FangYuan',monospace;
+    font-variation-settings:'wght' var(--fw-body);
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.9;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  .wrap{ max-width:900px; margin:0 auto; padding:0 24px; }
+
+  /* 顶部导航 */
+  .nav {
+    position:sticky; top:0; z-index:50;
+    background:rgba(254,252,246,.88);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner {
+    max-width:900px; margin:0 auto; padding:14px 24px;
+    display:flex; align-items:center; justify-content:space-between;
+  }
+  .nav-id { font-size:13.5px; letter-spacing:.5px; }
+  .nav-id b{ font-variation-settings:'wght' var(--fw-strong); font-weight:var(--fw-strong); }
+  .nav-links { display:flex; gap:22px; }
+  .nav-links a {
+    font-size:13.5px; color:var(--ink-2);
+    text-decoration:none; letter-spacing:.5px;
+    font-family:'FangYuan',sans-serif;
+    transition:color .2s;
+  }
+  .nav-links a:hover{ color:var(--ink); }
+
+  /* ============ Hero：笔记本 ============ */
+  .hero {
+    min-height:calc(100vh - 50px);
+    display:flex; flex-direction:column;
+    align-items:center; justify-content:center;
+    padding:70px 0 90px;
+  }
+
+  .laptop{ width:min(680px, 100%); }
+
+  .laptop-lid {
+    background:var(--bezel);
+    border-radius:14px 14px 5px 5px;
+    padding:11px 11px 13px;
+    box-shadow:0 1px 0 rgba(255,255,255,.1) inset, 0 18px 42px rgba(42,42,48,.13);
+  }
+
+  .screen {
+    background:var(--screen);
+    border-radius:5px;
+    overflow:hidden;
+    position:relative;
+    /* CRT 扫描线 */
+    background-image:repeating-linear-gradient(
+      0deg, rgba(255,255,255,.055) 0 1px, transparent 1px 3px);
+  }
+
+  .screen-bar {
+    display:flex; align-items:center; justify-content:space-between;
+    padding:11px 15px 10px;
+    border-bottom:1px solid rgba(255,255,255,.22);
+  }
+  .dots{ display:flex; gap:7px; }
+  .dot{ width:11px; height:11px; border-radius:50%; }
+  .d1{ background:var(--red-dot); }
+  .d2{ background:var(--yel-dot); }
+  .d3{ background:var(--grn-dot); }
+  .screen-user{
+    font-size:12.5px; color:rgba(255,255,255,.9);
+    font-family:'FangYuan',sans-serif; letter-spacing:.5px;
+  }
+
+  .term { padding:22px 26px 26px; }
+
+  .row{ margin-bottom:16px; }
+  .row:last-child{ margin-bottom:0; }
+
+  .cmd{
+    font-size:14.5px; color:#fff;
+    font-weight:var(--fw-strong); font-variation-settings:'wght' var(--fw-strong);
+    letter-spacing:.3px;
+  }
+  .cmd .s{ color:var(--dollar); }
+
+  .out{
+    font-size:15px; color:rgba(255,255,255,.94);
+    font-family:'FangYuan',sans-serif;
+    line-height:2.05; margin-top:2px;
+  }
+  .out .ar{ color:var(--dollar); margin-right:9px; font-family:'JBMono',monospace; }
+
+  .out-name{
+    font-size:27px; letter-spacing:5px;
+    font-variation-settings:'wght' var(--fw-strong);
+    color:#fff;
+  }
+  .out-meta{
+    font-size:14px; color:rgba(255,255,255,.8);
+    font-family:'FangYuan',sans-serif; margin-top:4px;
+  }
+  .out-en{
+    font-size:14px; color:rgba(255,255,255,.72);
+    letter-spacing:1px; margin-top:1px;
+  }
+
+  /* 笔记本底座 */
+  .laptop-base{
+    height:11px; margin:0 auto;
+    background:linear-gradient(180deg,#D8D8DC,#BFBFC4);
+    border-radius:0 0 9px 9px;
+    position:relative;
+    width:112%;
+    margin-left:-6%;
+  }
+  .laptop-base::after{
+    content:''; position:absolute;
+    left:50%; top:0; transform:translateX(-50%);
+    width:13%; height:4px; border-radius:0 0 5px 5px;
+    background:rgba(0,0,0,.14);
+  }
+  .laptop-shadow{
+    height:16px; margin:9px auto 0;
+    width:104%; border-radius:50%;
+    background:radial-gradient(ellipse at center, rgba(42,42,48,.16), transparent 68%);
+  }
+
+  .hero-tags{
+    margin-top:38px;
+    display:flex; gap:10px; flex-wrap:wrap; justify-content:center;
+  }
+  .htag{
+    font-family:'FangYuan',sans-serif;
+    font-size:13.5px; letter-spacing:1px;
+    padding:6px 17px; border-radius:999px;
+    background:#fff; border:1px solid var(--line);
+    color:var(--ink-2);
+  }
+  .htag.on{ background:var(--screen); border-color:var(--screen); color:#fff; }
+
+  .scroll-hint{
+    margin-top:30px; text-align:center;
+    font-size:12px; color:var(--ink-3); letter-spacing:2px;
+    font-family:'FangYuan',sans-serif;
+  }
+  .scroll-hint span{ display:block; animation:bob 1.9s ease-in-out infinite; }
+  @keyframes bob{ 0%,100%{ transform:translateY(0);} 50%{ transform:translateY(5px);} }
+
+  /* ============ 通用区块 ============ */
+  section{ padding:78px 0; }
+
+  .sec-head{ margin-bottom:34px; }
+  .sec-tag{
+    font-size:12.5px; color:var(--ink-3);
+    letter-spacing:2px; margin-bottom:7px;
+  }
+  h2{
+    font-family:'FangYuan',sans-serif;
+    font-size:30px; letter-spacing:2px;
+    font-variation-settings:'wght' var(--fw-strong);
+    line-height:1.5;
+  }
+  .sec-sub{
+    margin-top:7px; font-size:14px; color:var(--ink-2);
+    font-family:'FangYuan',sans-serif;
+  }
+  .rule{ height:1px; background:var(--line); margin-top:22px; }
+
+  /* 技能 */
+  .skill-grid{
+    display:grid; grid-template-columns:repeat(4, 1fr);
+    gap:14px;
+  }
+  .skill{
+    background:#fff; border:1px solid var(--line);
+    border-radius:12px; padding:22px 14px 20px;
+    text-align:center;
+    transition:border-color .2s, transform .2s;
+  }
+  .skill:hover{ border-color:var(--screen); transform:translateY(-3px); }
+  .skill-i{ font-size:22px; line-height:1.5; }
+  .skill-n{
+    font-family:'FangYuan',sans-serif;
+    font-size:16.5px; margin-top:6px;
+    font-variation-settings:'wght' var(--fw-label);
+    letter-spacing:1.5px;
+  }
+  .skill-d{
+    font-family:'FangYuan',sans-serif;
+    font-size:12.5px; color:var(--ink-2);
+    margin-top:5px; line-height:1.85;
+  }
+
+  /* 经历 */
+  .exp{ display:flex; flex-direction:column; }
+  .exp-item{
+    display:grid; grid-template-columns:132px 1fr;
+    gap:28px; padding:28px 0;
+    border-bottom:1px solid var(--line);
+    align-items:start;
+  }
+  .exp-item:last-child{ border-bottom:none; }
+  .exp-l{ text-align:right; }
+  .exp-ord{
+    font-size:12px; color:var(--ink-3); letter-spacing:1.5px;
+    line-height:1;
+  }
+  .exp-pos{
+    font-family:'FangYuan',sans-serif;
+    font-size:21px; letter-spacing:1.5px;
+    font-variation-settings:'wght' var(--fw-strong);
+    margin-top:8px; line-height:1.4;
+  }
+  .exp-badge{
+    display:inline-block; margin-top:9px;
+    font-family:'FangYuan',sans-serif;
+    font-size:11.5px; padding:2px 9px; border-radius:5px;
+    background:rgba(43,127,216,.09); color:var(--screen);
+    letter-spacing:.5px; line-height:1.7;
+  }
+  .exp-r{ padding-top:1px; }
+  .exp-d{
+    font-family:'FangYuan',sans-serif;
+    font-size:14.5px; color:var(--ink-2); line-height:2;
+  }
+  .exp-d b{ color:var(--ink); font-variation-settings:'wght' var(--fw-label); }
+  .exp-t{ margin-top:11px; display:flex; gap:7px; flex-wrap:wrap; }
+  .exp-t span{
+    font-family:'FangYuan',sans-serif;
+    font-size:12px; padding:3px 10px; border-radius:6px;
+    background:#F4F6F9; color:#5A6472;
+  }
+
+  /* 作品 */
+  .work-grid{
+    display:grid; grid-template-columns:repeat(4, 1fr); gap:14px;
+  }
+  .work{
+    aspect-ratio:1/1; border:1px dashed #CFCBC0; border-radius:12px;
+    background:#fff;
+    display:flex; flex-direction:column;
+    align-items:center; justify-content:center; gap:5px;
+    color:var(--ink-3); text-align:center; padding:12px;
+    transition:border-color .2s, background .2s;
+  }
+  .work:hover{ border-color:var(--screen); background:#FBFCFE; }
+  .work-i{ font-size:24px; }
+  .work-n{
+    font-family:'FangYuan',sans-serif;
+    font-size:14px; color:var(--ink); letter-spacing:1px;
+    font-variation-settings:'wght' var(--fw-label);
+  }
+  .work-s{ font-family:'FangYuan',sans-serif; font-size:11.5px; }
+
+  /* 联系 */
+  .contact-list{ display:flex; flex-direction:column; gap:0; }
+  .contact-list a{
+    display:flex; align-items:center; gap:18px;
+    padding:17px 22px; background:#fff;
+    border:1px solid var(--line); border-bottom:none;
+    text-decoration:none; color:var(--ink);
+    transition:border-color .2s, background .2s;
+  }
+  .contact-list a:last-child{ border-bottom:1px solid var(--line); border-radius:0 0 11px 11px; }
+  .contact-list a:first-child{ border-radius:11px 11px 0 0; }
+  .contact-list a:hover{ background:#FBFCFE; border-color:var(--screen); }
+  .c-k{
+    font-family:'FangYuan',sans-serif;
+    font-size:12.5px; color:var(--ink-2); letter-spacing:1.5px;
+    width:66px; flex:none;
+  }
+  .c-v{
+    font-family:'FangYuan',sans-serif;
+    font-size:15.5px; letter-spacing:.5px;
+    font-variation-settings:'wght' var(--fw-label);
+  }
+  .c-v.ph{ color:var(--ink-3); font-variation-settings:'wght' 400; }
+
+  /* 底部 */
+  .footer{
+    padding:44px 0 52px; border-top:1px solid var(--line);
+    display:flex; align-items:center; justify-content:space-between;
+    flex-wrap:wrap; gap:14px;
+  }
+  .f-l{
+    font-family:'FangYuan',sans-serif;
+    font-size:13px; color:var(--ink-3); letter-spacing:.5px;
+  }
+  .f-r{ display:flex; gap:8px; flex-wrap:wrap; }
+  .f-p{
+    font-family:'FangYuan',sans-serif;
+    font-size:12.5px; letter-spacing:.5px; color:var(--ink-2);
+    padding:5px 13px; border-radius:999px; background:#fff;
+    border:1px solid var(--line); text-decoration:none;
+    transition:background .2s, color .2s;
+  }
+  .f-p:hover{ background:#F2F5F9; }
+  .f-p.on{ background:var(--pill); border-color:var(--pill); color:var(--ink);
+    font-variation-settings:'wght' var(--fw-label); }
+
+  /* ============ 响应式 ============ */
+  @media (max-width:760px){
+    .wrap{ padding:0 18px; }
+    .nav-links{ display:none; }
+    .laptop-lid{ padding:8px 8px 10px; }
+    .term{ padding:16px 16px 20px; }
+    .out-name{ font-size:22px; letter-spacing:3px; }
+    .out{ font-size:14px; line-height:1.95; }
+    .cmd{ font-size:13px; }
+    .screen-user{ font-size:11px; }
+    .skill-grid{ grid-template-columns:repeat(2, 1fr); }
+    .work-grid{ grid-template-columns:repeat(2, 1fr); }
+    .exp-item{ grid-template-columns:1fr; gap:10px; }
+    .exp-l{ text-align:left; display:flex; align-items:baseline; gap:11px; }
+    .exp-ord{ display:none; }
+    .exp-badge{ margin-top:0; }
+    section{ padding:56px 0; }
+    h2{ font-size:24px; }
+    .c-k{ width:auto; }
+  }
+
+  @media print{
+    .nav,.scroll-hint{ display:none; }
+    body{ background:#fff; }
+    section{ padding:22px 0; break-inside:avoid; }
+    .laptop{ width:100%; }
+  }
+</style>
+</head>
+<body>
+
+<!-- 顶部导航 -->
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-id"><b>chenyao</b>@resume ~ %</div>
+    <div class="nav-links">
+      <a href="#skills">技能</a>
+      <a href="#exp">经历</a>
+      <a href="#work">作品</a>
+      <a href="#contact">联系</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <!-- Hero -->
+  <header class="hero" id="home">
+    <div class="laptop">
+      <div class="laptop-lid">
+        <div class="screen">
+          <div class="screen-bar">
+            <div class="dots">
+              <div class="dot d1"></div>
+              <div class="dot d2"></div>
+              <div class="dot d3"></div>
+            </div>
+            <div class="screen-user">chenyao@laptop — zsh</div>
+          </div>
+
+          <div class="term">
+            <div class="row">
+              <div class="cmd"><span class="s">$</span> whoami</div>
+              <div class="out">
+                <span class="ar">&gt;</span><span class="out-name">陈 瑶</span>
+                <div class="out-meta" style="padding-left:22px">女 · 2002.09.02 · 24 岁</div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="cmd"><span class="s">$</span> cat about.md</div>
+              <div class="out">
+                <span class="ar">&gt;</span>电商产品摄影 / 剪辑 / 文案 / AI 剪辑
+                <div class="out-en" style="padding-left:22px">SHOOT · EDIT · WRITE · AI</div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="cmd"><span class="s">$</span> cat skills.txt</div>
+              <div class="out">
+                <span class="ar">&gt;</span>摄影　剪辑　文案　AI 剪辑
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="laptop-base"></div>
+      <div class="laptop-shadow"></div>
+    </div>
+
+    <div class="hero-tags">
+      <div class="htag on">电商摄影</div>
+      <div class="htag">视频剪辑</div>
+      <div class="htag">文案策划</div>
+      <div class="htag">AI 剪辑</div>
+    </div>
+
+    <div class="scroll-hint"><span>↓ 向下滚动</span></div>
+  </header>
+
+  <!-- 技能 -->
+  <section id="skills">
+    <div class="sec-head">
+      <div class="sec-tag">01 / SKILLS</div>
+      <h2>会的技能</h2>
+      <div class="sec-sub">四项核心能力，覆盖从拍摄到成片的完整链路</div>
+      <div class="rule"></div>
+    </div>
+
+    <div class="skill-grid">
+      <div class="skill">
+        <div class="skill-i">📷</div>
+        <div class="skill-n">摄影</div>
+        <div class="skill-d">电商产品拍摄<br>灯光与构图</div>
+      </div>
+      <div class="skill">
+        <div class="skill-i">🎬</div>
+        <div class="skill-n">剪辑</div>
+        <div class="skill-d">素材粗剪精剪<br>节奏与转场</div>
+      </div>
+      <div class="skill">
+        <div class="skill-i">✍️</div>
+        <div class="skill-n">文案</div>
+        <div class="skill-d">产品卖点提炼<br>标题与脚本</div>
+      </div>
+      <div class="skill">
+        <div class="skill-i">✨</div>
+        <div class="skill-n">AI 剪辑</div>
+        <div class="skill-d">AI 辅助成片<br>提效</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 工作经历 -->
+  <section id="exp">
+    <div class="sec-head">
+      <div class="sec-tag">02 / EXPERIENCE</div>
+      <h2>工作经历</h2>
+      <div class="sec-sub">四段经历，从出镜表达走到独立掌镜</div>
+      <div class="rule"></div>
+    </div>
+
+    <div class="exp">
+      <div class="exp-item">
+        <div class="exp-l">
+          <div class="exp-ord">04</div>
+          <div class="exp-pos">摄影</div>
+          <div class="exp-badge">在职 · 核心</div>
+        </div>
+        <div class="exp-r">
+          <div class="exp-d">
+            负责电商产品实拍与后期成片，覆盖<b>鞋类、男装、女裤、水杯</b>等品类；
+            独立完成拍摄、选图、精修到视频剪辑的全流程。
+          </div>
+          <div class="exp-t">
+            <span>产品拍摄</span><span>鞋服配饰</span><span>水杯日用</span><span>后期成片</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-l">
+          <div class="exp-ord">03</div>
+          <div class="exp-pos">中介</div>
+          <div class="exp-badge">客户服务</div>
+        </div>
+        <div class="exp-r">
+          <div class="exp-d">
+            负责客户房源 / 需求信息对接与跟进，完成<b>对接、带看、促成签约</b>全流程服务，
+            积累了较多沟通协调与客户接待经验。
+          </div>
+          <div class="exp-t">
+            <span>客户对接</span><span>需求匹配</span><span>沟通协调</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-l">
+          <div class="exp-ord">02</div>
+          <div class="exp-pos">家教老师</div>
+          <div class="exp-badge">教育</div>
+        </div>
+        <div class="exp-r">
+          <div class="exp-d">
+            为中小学生提供<b>学科辅导与作业答疑</b>，根据学生情况定制学习计划，
+            具备耐心、清晰的表达能力和亲和力。
+          </div>
+          <div class="exp-t">
+            <span>学科辅导</span><span>因材施教</span><span>沟通表达</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-l">
+          <div class="exp-ord">01</div>
+          <div class="exp-pos">主播</div>
+          <div class="exp-badge">出镜表达</div>
+        </div>
+        <div class="exp-r">
+          <div class="exp-d">
+            负责<b>直播间出镜讲解与商品介绍</b>，熟悉产品卖点提炼与现场应变，
+            对镜头表达自然流畅。
+          </div>
+          <div class="exp-t">
+            <span>出镜讲解</span><span>产品卖点</span><span>直播运营</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 作品 -->
+  <section id="work">
+    <div class="sec-head">
+      <div class="sec-tag">03 / WORKS</div>
+      <h2>代表作品</h2>
+      <div class="sec-sub">拍过的品类 —— 待上传作品图</div>
+      <div class="rule"></div>
+    </div>
+
+    <div class="work-grid">
+      <div class="work">
+        <div class="work-i">👟</div>
+        <div class="work-n">鞋类</div>
+        <div class="work-s">待上传</div>
+      </div>
+      <div class="work">
+        <div class="work-i">👕</div>
+        <div class="work-n">男装</div>
+        <div class="work-s">待上传</div>
+      </div>
+      <div class="work">
+        <div class="work-i">👖</div>
+        <div class="work-n">女裤</div>
+        <div class="work-s">待上传</div>
+      </div>
+      <div class="work">
+        <div class="work-i">🥤</div>
+        <div class="work-n">水杯</div>
+        <div class="work-s">待上传</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 联系 -->
+  <section id="contact">
+    <div class="sec-head">
+      <div class="sec-tag">04 / CONTACT</div>
+      <h2>联系方式</h2>
+      <div class="rule"></div>
+    </div>
+
+    <div class="contact-list">
+      <a href="javascript:void(0)">
+        <span class="c-k">手机</span>
+        <span class="c-v ph">待填写</span>
+      </a>
+      <a href="javascript:void(0)">
+        <span class="c-k">邮箱</span>
+        <span class="c-v ph">待填写</span>
+      </a>
+      <a href="javascript:void(0)">
+        <span class="c-k">微信</span>
+        <span class="c-v ph">待填写</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- 底部 -->
+  <div class="footer">
+    <div class="f-l">陈瑶 · 摄影 / 剪辑　期待与您联系</div>
+    <div class="f-r">
+      <a class="f-p on" href="#home">01 主页</a>
+      <a class="f-p" href="#skills">02 技能</a>
+      <a class="f-p" href="#exp">03 经历</a>
+      <a class="f-p" href="#work">04 作品</a>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
